@@ -1,4 +1,4 @@
-package _03_More_Array_Fun;
+package _03_more_array_fun;
 
 import java.util.Random;
 

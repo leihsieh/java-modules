@@ -27,7 +27,7 @@ public class DynamicIntegerArray {
 	
 	//4. Complete the steps in the get method
 	public int get(int location) {
-		//A. Return the value of the memeber array at the location passed in
+		//A. Return the value of the member array at the location passed in
 		return 0;
 	}
 	
