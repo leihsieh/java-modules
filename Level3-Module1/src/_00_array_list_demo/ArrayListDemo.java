@@ -1,8 +1,8 @@
-package _01_IntroToArrayLists;
+package _00_array_list_demo;
 
 import java.util.ArrayList;
 
-public class _00_ArrayListDemo {
+public class ArrayListDemo {
 	public static void main(String[] args) {
 		System.out.println("Here's an ArrayList of Strings:\n");
 		//ArrayList of Strings

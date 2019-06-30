@@ -1,4 +1,4 @@
-package _01_IntroToArrayLists;
+package _05_removing_stuff_from_array_lists;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Cleaning Exercises Duration=.00 Platform=Eclipse Type=Recipe Objectives=
  */
 
-public class _04_RemovingStuffFromArrayLists {
+public class RemovingStuffFromArrayLists {
 
 	public static void main(String[] args) {
 

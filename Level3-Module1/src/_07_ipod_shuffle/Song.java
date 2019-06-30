@@ -1,4 +1,4 @@
-package _01_IntroToArrayLists;
+package _07_ipod_shuffle;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

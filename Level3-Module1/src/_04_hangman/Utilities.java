@@ -1,4 +1,4 @@
-package _04_HangMan;
+package _04_hangman;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

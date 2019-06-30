@@ -1,4 +1,4 @@
-package _01_IntroToArrayLists;
+package _07_ipod_shuffle;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -6,8 +6,8 @@ import java.util.Random;
 
 //Copyright The League of Amazing Programmers, 2015
 
-public class _06_IPodShuffle{
-	public _06_IPodShuffle() {
+public class IPodShuffle{
+	public IPodShuffle() {
 		// 1. Use the Song class the play the demo.mp3 file.
 				
 				
@@ -22,6 +22,6 @@ public class _06_IPodShuffle{
 	}
 	
 	public static void main(String[] args) {
-		new _06_IPodShuffle();
+		new IPodShuffle();
 	}
 }

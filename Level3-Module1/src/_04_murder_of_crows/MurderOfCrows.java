@@ -1,4 +1,4 @@
-package _01_IntroToArrayLists;
+package _04_murder_of_crows;
 
 
 /** Copyright The League of Amazing Programmers 2013-2017
@@ -15,12 +15,12 @@ import java.util.Random;
 
 import javax.swing.JOptionPane;
 
-public class _03_MurderOfCrows {
+public class MurderOfCrows {
 
     ArrayList<Crow> theMurder = new ArrayList<Crow>();
 
     public static void main(String[] args) {
-        _03_MurderOfCrows murderOfCrows = new _03_MurderOfCrows();
+        MurderOfCrows murderOfCrows = new MurderOfCrows();
         murderOfCrows.initializeCrows();
         murderOfCrows.findTheDiamond();
     }

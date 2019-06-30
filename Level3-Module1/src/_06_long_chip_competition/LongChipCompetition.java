@@ -1,11 +1,11 @@
-package _01_IntroToArrayLists;
+package _06_long_chip_competition;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
 
-public class _05_LongChipCompetition {
+public class LongChipCompetition {
 	/**
 	 * The Beatles are eating lunch and playing a game to see who has the longest
 	 * chip. (In England, french fries are called "chips".) * Find the Beatle with
@@ -15,7 +15,7 @@ public class _05_LongChipCompetition {
 	private ArrayList<Beatle> theBeatles = new ArrayList<Beatle>();
 
 	public static void main(String[] args) {
-		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
+		LongChipCompetition lcc = new LongChipCompetition();
 		
 	}
 	

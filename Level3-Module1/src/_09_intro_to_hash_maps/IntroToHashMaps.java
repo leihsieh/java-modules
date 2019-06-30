@@ -1,8 +1,8 @@
-package _06_Intro_To_Hash_Maps;
+package _09_intro_to_hash_maps;
 
 import java.util.HashMap;
 
-public class _01_IntroToHashMaps {
+public class IntroToHashMaps {
 	public static void main(String[] args) {
 		//1. Create a HashMap called roots with Integers for the keys and Doubles for the values.
 

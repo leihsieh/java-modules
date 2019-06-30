@@ -1,7 +1,7 @@
-package _06_Intro_To_Hash_Maps;
+package _10_log_search;
 
 
-public class _02_LogSearch {
+public class LogSearch {
   /* 
 	 * Crate a HashMap of Integers for the keys and Strings for the values.
 	 * Create a GUI with three buttons. 

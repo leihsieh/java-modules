@@ -1,8 +1,8 @@
-package _06_Intro_To_Hash_Maps;
+package _08_hash_map_demo;
 
 import java.util.HashMap;
 
-public class _00_HashMapDemo {
+public class HashMapDemo {
 	public static void main(String[] args) {
 		//Creating a HashMap of id's and students
 		HashMap<Integer, String> studentRoster = new HashMap<Integer, String>();
