@@ -1,0 +1,6 @@
+package _05_bogo_sort;
+
+public abstract class Sorter {
+	public String type;
+	abstract void sort(int[] array, SortingVisualizer display);
+}

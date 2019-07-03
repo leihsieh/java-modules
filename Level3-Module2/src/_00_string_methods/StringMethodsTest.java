@@ -1,4 +1,4 @@
-package StringMethods;
+package _00_string_methods;
 
 import static org.junit.jupiter.api.Assertions.*;
 
