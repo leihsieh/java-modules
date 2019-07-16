@@ -34,6 +34,7 @@ public class AnimalFarm {
    			 JOptionPane.showMessageDialog(null, "Have the right animal?");
    		 }
    	 }
+	}
 
 	void playMoo() {
 		playNoise(mooFile);

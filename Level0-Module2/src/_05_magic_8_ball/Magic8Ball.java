@@ -6,6 +6,8 @@ package _05_magic_8_ball;
 
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 public class Magic8Ball {
 
     // 1. Make a main method that includes all the steps belowâ€¦.
@@ -38,5 +40,5 @@ public class Magic8Ball {
    	 } else if (randomNumber == 3) {
    		 JOptionPane.showMessageDialog(null, "CUSTOM ANSWER HERE");
    	 }
-    
+    }  
 }
