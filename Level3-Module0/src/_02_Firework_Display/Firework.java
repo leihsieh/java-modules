@@ -26,9 +26,7 @@ public class Firework{
 		//3. Iterate through the sparks and initialize each one to a new Spark.
 		//   Make each spark start at the middle bottom of the screen.
 		for (int i = 0; i < sparks.length; i++) {
-			sparks[i] = new Spark();
-			sparks[i].x = FireworkDisplay.WIDTH/2;
-			sparks[i].y = FireworkDisplay.HEIGHT;
+			sparks[i] = new Spark(FireworkDisplay.WIDTH/2, FireworkDisplay.HEIGHT);
 		}
 		
 	}
