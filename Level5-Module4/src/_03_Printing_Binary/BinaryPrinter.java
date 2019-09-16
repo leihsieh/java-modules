@@ -29,16 +29,19 @@ public class BinaryPrinter {
 	
 	public void printShortBinary(short s) {
 		printByteBinary((byte)((s & 0xFF00) >> 8));
+		System.out.print( " " );
 		printByteBinary((byte)((s & 0x00FF) >> 0));
 	}
 	
 	public void printIntBinary(int i) {
 		printShortBinary((short)((i & 0xFFFF0000) >> 16));
+	    System.out.print( " " );
 		printShortBinary((short)((i & 0x0000FFFF) >> 0));
 	}
 	
 	public void printLongBinary(long l) {
 		printIntBinary((int)(l >> 32));
+	    System.out.print( " " );
 		printIntBinary((int)((l & 0x00000000FFFFFFFF) >> 0));
 	}
 }
