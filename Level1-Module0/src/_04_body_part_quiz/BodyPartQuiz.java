@@ -1,4 +1,4 @@
-package _05_body_part_quiz;
+package _04_body_part_quiz;
 
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019

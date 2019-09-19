@@ -1,12 +1,11 @@
-package _05_body_part_quiz;
-
+package _05_duelling_buttons;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
  */
 
-public class BodyPartQuizRunner {
+public class DuelingButtonsRunner {
 	public static void main(String[] args) {
-		new BodyPartQuiz().run();
+		new DuelingButtons().run();
 	}
 }

@@ -1,4 +1,4 @@
-package _04_drum_kit;
+package _03_drum_kit;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
