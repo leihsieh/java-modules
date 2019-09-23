@@ -76,7 +76,7 @@ public class AdvancedBinaryConverter implements ActionListener {
 		addObjectToPanel( labelDecimal, 3, 0, 1 );
 		
 		// 13. Add the decimalResult JTextField to the panel next to label from step 11 using addObjectToPanel().
-		addObjectToPanel( decimalResult, 3, 1, 2 );
+		addObjectToPanel( decimalResult, 3, 1, 1 );
 		
 		// 14. Create a new JLabel with the text "Hexidecimal:"
 		JLabel labelHex = new JLabel( "Hex: " );
