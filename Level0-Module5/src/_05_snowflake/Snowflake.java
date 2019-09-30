@@ -17,7 +17,7 @@ public class Snowflake {
 
 		// #2. Set your robot’s position to x=300 and y=300
 
-		rob.setPos(300, 300);
+		rob.moveTo(300, 300);
 
 		// #3. Put the robot's pen down
 		rob.penDown();
