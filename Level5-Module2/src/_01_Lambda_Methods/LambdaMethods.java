@@ -1,5 +1,9 @@
 package _01_Lambda_Methods;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 public class LambdaMethods {
     public static void main(String[] args) {
         // 1. Look at the SpecialPrinter function interface.
@@ -23,9 +27,11 @@ public class LambdaMethods {
 
         // 3. Call the printCustonMessage method using a lambda so that the String
         // prints with a mix between upper an lower case characters.
+        Random rand = new Random();
+        
         printCustomMessage( (str)-> {
             for( int i = 0; i < str.length(); i++ ) {
-                if( i%2 == 0 ) { 
+                if( rand.nextBoolean() ) { 
                     System.out.print( str.substring( i, i+1 ).toUpperCase() );
                 } else {
                     System.out.print( str.substring( i, i+1 ).toLowerCase() );
@@ -50,10 +56,14 @@ public class LambdaMethods {
         
         // 5. Call the printCustonMessage method using a lambda so that the String
         // prints without any vowels.
+        Character[] vowelsArr = { 'a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U' };
+        List<Character> vowelsList = Arrays.asList( vowelsArr );
+        
         printCustomMessage( (str)-> {
             for( int i = 0; i < str.length(); i++ ) {
                 char c = str.charAt( i );
-                if( c != 'a' && c != 'e' && c!= 'i' && c != 'o' && c != 'u' ) {
+                
+                if( !vowelsList.contains( c ) ) {
                     System.out.print( c );
                 }
             }
