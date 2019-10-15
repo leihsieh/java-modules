@@ -6,6 +6,9 @@ package _04_drum_kit;
 
 public class DrumKitRunner {
     public static void main(String[] args) throws Exception {
-    	new DrumKit().run();
+    	
+    	/*  Complete the code in the DrumKitView class before running this program */
+
+    	new DrumKitView();
     }
 }
