@@ -33,21 +33,13 @@ public class SimonSaysController implements KeyListener {
 		 
 	
 		 
-		// 2. Tell the user whether they were correct or not (use the view for this)
-		
+		// 2. Tell the user whether they were correct or not - use the methods below
+
+		// 3. if the player has had too many tries (ask the  model) ....
+		// 	tell them their score and exit the program
 
 
-		// 3. if the user has had too many tries (ask the  model) 
-
-			// 	Tell the user their score (use the view)
-
-
-
-			//	Exit the program
-
-
-
-		// 4.  Tell the view to showNextImage 
+		// 4.  tell the view to showNextImage 
 
 	}
 
@@ -61,9 +53,30 @@ public class SimonSaysController implements KeyListener {
 		// The next line uses a Random object to get an arrow keyCode
 		int keyCode = r.nextInt(4) + 37;
 
-		// This code returns the image that goes with the arrow keyCode
-		return model.getImageForKeyCode(keyCode);
+		// This code gets the image that goes with the keyCode
+		Icon icon = model.getImageForKeyCode(keyCode);
+		
+		if (model.simonSays()) {
+			speak ("Simon Says");
+		}
+		
+		return icon; 
 	}
-	
+
+	private void correctAnswer() {
+		speak("Correct");
+	}
+
+	private void wrongAnswer() {
+		speak("Incorrect");
+	}
+
+	private void speak(String words) {
+		try {
+			Runtime.getRuntime().exec("say " + words).waitFor();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 }

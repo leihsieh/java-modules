@@ -35,7 +35,7 @@ public class SimonSaysView {
 	
 		// 3. Set the defaultCloseOperation of your from to
 		// JFrame.EXIT_ON_CLOSE
-		
+	
 		// 4. Set the title of your frame
 
 		
@@ -43,7 +43,7 @@ public class SimonSaysView {
 		 * 
 		 *  5.  The model, SimonSaysModel, has the rules of the game. Complete this class next.
 		 *   
-		 *  6.  The controller, SimonSaysController, captures the player's input. Complete this class next.
+		 * 6.  The controller, SimonSaysController, captures the player's input. Complete this class next.
 		 */
 
 		// 7. Add a label to your frame. Use the getNextLabel method to make the label
@@ -56,9 +56,9 @@ public class SimonSaysView {
 		// 10. Add a key listener to the frame
 		// HINT: the controller is a KeyListener
 
-		// 11. Use the speak method to prompt the user Hint: the prompt comes from the model
+
 		
-		// 12. Run the program again. 
+		// 11. Run the program again. 
 
 	}
 
@@ -73,25 +73,4 @@ public class SimonSaysView {
 		makeFrame();
 	}
 
-	public void correctAnswer() {
-		speak("Correct");
-	}
-
-	public void wrongAnswer() {
-		speak("Incorrect");
-	}
-
-	public void reportScore() {
-
-		// 14. Use a dialog or the speak method to tell the user their final score
-
-	}
-
-	private void speak(String words) {
-		try {
-			Runtime.getRuntime().exec("say " + words).waitFor();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 }

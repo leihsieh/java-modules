@@ -19,7 +19,9 @@ public class SimonSaysModel {
 	private URL leftArrow;
 	private URL rightArrow;
 	private HashMap<Integer, Icon> images = new HashMap<Integer, Icon>();
-
+	private int imageKeyCode;
+	private String rules = "Press the matching key when Simon says \n" + "otherwise press a different key";
+	
 	Random r = new Random();
 	private boolean simonSays = false;
 
@@ -28,7 +30,6 @@ public class SimonSaysModel {
 	// 2. Declare and initialize a tries member variable to track how many attempts
 	// have been made
 
-	private String rules = "Press the matching key when Simon says \n" + "otherwise press a different key";
 
 	SimonSaysModel() {
 
@@ -42,6 +43,7 @@ public class SimonSaysModel {
 
 		upArrow = getClass().getResource("up.jpg");
 
+
 		// 5. Add each URL to the images collection - complete the code below for each
 		// arrow
 		images.put(new Integer(KeyEvent.VK_UP), new ImageIcon(upArrow));
@@ -49,40 +51,42 @@ public class SimonSaysModel {
 	}
 
 	public Icon getImageForKeyCode(int keyCode) {
+		// 6a. Store the keyCode in the member variable imageKeyCode
 
-		// 6. Use a Random object to set the model's SimonSays variable to true or false
+		
+		// 6b. Use a Random object to set the model's SimonSays variable to true or false
 		// HINT: Random objects have a nextBoolean method
 
-		return images.get(keyCode);
+		// This code returns the image of the key requested
+		return images.get(imageKeyCode);
 	}	
 	
 	
-	public boolean keyIsCorrect(int keyCode) {
+	public boolean keyIsCorrect(int playerKey) {
 
 		// 7. increment the number of tries made
 
-		// 8. if the keyCode matches the imageIndex....
+		// 8. if the playerKey matches the imageKeyCode....
 
 		// 		Check if "Simon said". If he did, increase the score  and return true
 
 		// 		If "Simon did not say", decrease the score  and return false
 		// 		Make sure the score does not go below zero!
 
+		
+		
 		// 9. Do the opposite if the keyCode does not match the imageIndex
 
+		
 	}
 
+	
 	public String getRules() {
-		return rules;
-	}
-
-	public String userPrompt() {
 
 		/*
 		 * 10. Change the line below to return the rules of Simon Says
 		 */
-		return "";
-		
+		return rules;
 	}
 
 	public boolean simonSays() {
@@ -90,6 +94,7 @@ public class SimonSaysModel {
 	}
 
 	// 11. Make a method to return the score
+
 
 	public boolean tooManyTries() {
 
