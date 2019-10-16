@@ -2,16 +2,19 @@ package _02_simon_says;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Random;
 
+import javax.swing.Icon;
 import javax.swing.JOptionPane;
 
 public class SimonSaysController implements KeyListener {
 
 	private SimonSaysModel model; 
 	private SimonSaysView view;
+	private Random r = new Random();
 	
-	SimonSaysController (SimonSaysModel model, SimonSaysView view) {
-		this.model = model;
+	SimonSaysController (SimonSaysView view) {
+		model = new SimonSaysModel();
 		this.view = view;
 	}
 	
@@ -54,4 +57,13 @@ public class SimonSaysController implements KeyListener {
 		
 	}
 
+	public Icon getNextRandomImage() {
+		// The next line uses a Random object to get an arrow keyCode
+		int keyCode = r.nextInt(4) + 37;
+
+		// This code returns the image that goes with the arrow keyCode
+		return model.getImageForKeyCode(keyCode);
+	}
+	
+	
 }

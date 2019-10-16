@@ -6,6 +6,9 @@ package _02_simon_says;
 
 public class SimonSaysRunner {
 	public static void main(String[] args){
+		
+    	/*  Complete the code in the SimonSaysView class before running this program */
+		
 		new SimonSaysView();
 	}
 

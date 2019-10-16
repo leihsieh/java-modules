@@ -12,70 +12,81 @@ import javax.swing.JOptionPane;
 
 public class SimonSaysView {
 	private SimonSaysController controller;
-	private SimonSaysModel model;
-	
-	private JFrame frame;
-	
-	SimonSaysView() {
-		model = new SimonSaysModel();
-		
-		// 1. Complete the SimonSaysModel before you start the View
-		
-		// 2. Use a JOptionPane to tell the user the rules
-		// Make sure you get the rules from the SimonSaysModel
 
-		
-		controller = new SimonSaysController(model, this);
+
+	private JFrame frame;
+
+	SimonSaysView() {
+
+		// 13. Use a JOptionPane to tell the user the rules
+		// The rules are in the SimonSaysModel class
+
+		controller = new SimonSaysController(this);
 		makeFrame();
 	}
-	
+
 	private void makeFrame() {
-		
-		// 3. Initialize your frame to a new JFrame()
 
-		// 4. Set the frame to visible
+		/* The view first consists of 2 components: a frame and a label */
 
-		// 5. Uncomment the following line to add an image to your frame
-		// 		frame.add(model.getNextRandomImage());
+		// 1. Initialize your frame to a new JFrame()
 
-		// 6. Set the title of your frame
-
-		// 7. Pack the frame
-
-		// 8. Set the defaultCloseOperation of your from to
+		// 2. Set the frame to visible
+	
+		// 3. Set the defaultCloseOperation of your from to
 		// JFrame.EXIT_ON_CLOSE
+		
+		// 4. Set the title of your frame
 
+		
+		/* Before you can complete the rest of the view, you need to code the model and controller.
+		 * 
+		 *  5.  The model, SimonSaysModel, has the rules of the game. Complete this class next.
+		 *   
+		 *  6.  The controller, SimonSaysController, captures the player's input. Complete this class next.
+		 */
+
+		// 7. Add a label to your frame. Use the getNextLabel method to make the label
+
+		// 8. Pack the frame
 
 		// 9. Run the program. Do you see an arrow key?
 
+		
 		// 10. Add a key listener to the frame
 		// HINT: the controller is a KeyListener
 
+		// 11. Use the speak method to prompt the user Hint: the prompt comes from the model
+		
+		// 12. Run the program again. 
 
-		/* 11. Use the speak method to prompt the user
-		 *  Hint: the prompt comes from the model
-		*/ 
+	}
 
+	private JLabel getNextLabel() {
+		JLabel label = new JLabel();
+		label.setIcon(controller.getNextRandomImage());
+		return label;
+	}
 
-}
 	public void showNextImage() {
 		frame.dispose();
 		makeFrame();
 	}
-	
+
 	public void correctAnswer() {
 		speak("Correct");
 	}
+
 	public void wrongAnswer() {
 		speak("Incorrect");
 	}
-	
+
 	public void reportScore() {
 
-		//12. Use a dialog or the speak method to tell the user their final score
-	
+		// 14. Use a dialog or the speak method to tell the user their final score
+
 	}
-	
+
 	private void speak(String words) {
 		try {
 			Runtime.getRuntime().exec("say " + words).waitFor();
