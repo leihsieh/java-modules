@@ -1,10 +1,8 @@
-package _04_drum_kit;
+package _07_drum_kit;
 
-import java.applet.AudioClip;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.swing.JApplet;
 import javax.swing.JLabel;
 
 public class DrumKitController implements MouseListener {

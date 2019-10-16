@@ -4,8 +4,10 @@ package _02_my_first_swing_gui;
  *    Level 1
  */
 
-public class MyFirstSwingGUIRunner {
+public class MyFirstSwingGuiRunner {
 	public static void main(String[] args) {
-		new MyFirstSwingGUI().run();
+		
+		/*  Complete the code in the MyFirstSwingView class before running this program */
+		new MyFirstSwingView();
 	}
 }

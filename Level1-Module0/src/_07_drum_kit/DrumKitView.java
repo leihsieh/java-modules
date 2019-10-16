@@ -1,11 +1,8 @@
-package _04_drum_kit;
+package _07_drum_kit;
 
-import java.applet.AudioClip;
 import java.awt.GridLayout;
-import java.net.URL;
 
 import javax.swing.Icon;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -37,7 +34,7 @@ public class DrumKitView {
 
 	private void makeFrame() {
 
-	   	/* Complete the steps below to make the window that will show the drum kit */
+		/* The view first consists of 2 components: a frame and a panel */
 		
 		// 1.1  Initialize the frame variable  "new JFrame()"
 
@@ -58,7 +55,7 @@ public class DrumKitView {
 	
 	private void addImages() {
     	
-    	/* Complete the steps below to add images to the drum kit */
+    	/* This method will add 2 labels to the view. One for a drum and one for a cymbal */
     	
 			/* 4.1  Use the makeLabelFromIcon method below
 			*       Pass it the drum icon from the model as its parameter

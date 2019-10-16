@@ -6,7 +6,9 @@ package _03_photo_quiz;
 
 
 public class PhotoQuizRunner {
-	public static void main(String[] args) throws Exception {
-		new PhotoQuiz().run();
+	public static void main(String[] args) {
+		
+		/*  Complete the code in the PhotoQuizView class before running this program */
+		new PhotoQuizView();
 	}
 }

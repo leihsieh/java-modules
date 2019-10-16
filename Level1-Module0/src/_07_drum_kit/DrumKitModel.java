@@ -1,4 +1,4 @@
-package _04_drum_kit;
+package _07_drum_kit;
 
 
 import java.applet.AudioClip;
