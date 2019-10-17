@@ -1,61 +1,61 @@
 package _03_jeopardy;
 
-import java.applet.AudioClip;
-
-import javax.swing.JApplet;
-import javax.swing.JOptionPane;
-
-
+import java.util.HashMap;
 
 public class JeopardyModel {
 
+	private HashMap<String, String> questions = new HashMap<String, String>();	
+	private HashMap<String, String> answers = new HashMap<String, String>();
 	private int score = 0;
-	private AudioClip sound;	
 	
+	private String currentQuestion;
 
+	JeopardyModel() {
+		
+		/* Write your own questions and answers here */
 
+		questions.put("100", "This is the question for 100 points");
+		questions.put("200", "This is the question for 200 points");
+		questions.put("400", "This is the question for 400 points");
+		questions.put("800", "This is the question for 800 points");
+	
+		answers.put("100", "This is the answer for 100 points");
+		answers.put("200", "This is the answer for 200 points");
+		answers.put("400", "This is the answer for 400 points");
+		answers.put("800", "This is the answer for 800 points");
+	}
+	
 	public int getScore() {
 		return score;
 	}
 	
-	public void askQuestionForAmount(String buttonLabel) {
+	public String getAnswerForCurrentQuestion() {
+		return answers.get(currentQuestion);
+	}
 	
-		// Use the playJeopardyTheme() method to play music while you ask the user a queston
-		
-playJeopardyTheme();		
-		
-		// Check the buttonLabel and ask a question depending on the label
-		// Use a dialog to ask the question
-		// $100 questions should be easier than $1000 questions
+	public String getQuestionForAmount(String amount) {
+		currentQuestion = amount;
+		return questions.get(amount);
+	}
 
-String answer = JOptionPane.showInputDialog("To be or not to be");
-		
-		
-		// Stop the theme music when they have entered their response. Hint: use the sound variable 
-sound.stop();		
-		// If the answer is correct
-if (answer.equalsIgnoreCase("Yes")) {	
-			// Increase the score by the prizeMoney
-score += Integer.parseInt(buttonLabel);	
-			// Pop up a message to tell the user they were correct
-JOptionPane.showMessageDialog(null, "Correct");	
-}
-		// Otherwise
-else {	
-			// Decrement the score by the prizeMoney (check for zero?)
-	score -= Integer.parseInt(buttonLabel);	
 	
-			// Pop up a message to tell the user they were wrong and give them the correct answer
-	JOptionPane.showMessageDialog(null, "Inorrect. the answer is yes");
-}
+	public boolean checkPlayerAnswer(String playerAnswer) {
+	
+	
+		// If the answer is correct
+
+			// Increase the score by the amount of the current question
+
+			// return true
+
+
+		// Otherwise
+
+			// Decrement the score by the prizeMoney (check for zero?)
+
+			// return false 
+
+
 	}
-	public void playJeopardyTheme() {
-		try {
-			sound = JApplet.newAudioClip(getClass().getResource("jeopardy.wav"));
-			sound.play();
-			Thread.sleep(3400);
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-	}
+
 }

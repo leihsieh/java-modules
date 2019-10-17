@@ -5,11 +5,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
-import java.net.URL;
-
 import javax.swing.BoxLayout;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,88 +13,105 @@ import javax.swing.JPanel;
 
 public class JeopardyView {
 	
+	private JFrame frame;
 	private JPanel quizPanel;
 	private JButton firstButton, secondButton, thirdButton, fourthButton;
 	private int buttonCount = 0;	
 	
 	private JLabel scoreBox = new JLabel("0");
 
-
-	private JeopardyModel model;
 	private JeopardyController controller;
 
 	JeopardyView () {
-		model = new JeopardyModel();
-		controller = new JeopardyController(model, this);
+
+		controller = new JeopardyController(this);
 		makeFrame();
 	}
 	
 	
 	public void makeFrame() {
-		JFrame frame = new JFrame();
+		
+		/* 	The view consists of 3 main components: a frame and two panels 
+		 * 	One panel has the entire quiz, the other has just the header
+		 *  The quiz panel will have 4 buttons, one for each Jeopardy question
+		 */
+
+		frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		quizPanel = new JPanel();
 		frame.setLayout(new BorderLayout());
 
 		// 1. Make the frame show up
-frame.setVisible(true);
+
 		// 2. Give your frame a title
-frame.setTitle("Jeopardy");
-		// 3. Create a JPanel variable to hold the header using the createHeader method
-JPanel header = createHeader("TOPIC");
-		// 4. Add the header component to the quizPanel
-quizPanel.add(header);
+
+		// 3. Pick a topic for your Jeopardy Game.
+		//    Use the createHeader method to create a JPanel that will show the topic
+
+		// 4. Add the header from step 3 to the quizPanel
+
 		// 5. Add the quizPanel to the frame
-frame.add(quizPanel);
-		// 6. Use the createButton method to set the value of firstButton
-firstButton = createButton("100");
-		// 7. Add the firstButton to the quizPanel
-quizPanel.add(firstButton);
-		// 8. Write the code to complete the createButton() method below. Check that your
-		// game looks like Figure 1 in the Jeopardy Handout - http://bit.ly/1bvnvd4.
 
-		// 9. Use the secondButton variable to hold a button using the createButton
-		// method
-secondButton = createButton("200");
-		// 10. Add the secondButton to the quizPanel
-quizPanel.add(secondButton);
-		// 11. Add action listeners to the buttons (2 lines of code)
+		// 6. Write the code to complete the createButton() method below. 
+
+		// 7. Use the createButton method to set the value of firstButton
+		//    USE "100" for the Amount
+
+		// 8. Add the firstButton to the quizPanel. 
+		//	  Run the program.
+		//    Check that your game looks like Figure 1 in the recipe page
+
+
+		// 9. Use the createButton method 3 more times to set the values of the 
+		//    secondButton, thirdButton, and fourthButton
+		//    USE "200", "400", and "800" for the amounts
+
+		// 10. Add all buttons to the quizPanel. Run the program. They should all be there.
+
+		
+		// 11. *** Now complete the code in the JeopardyController class ***
+
+
+		// 12. Add action listeners to all the buttons
 		//  HINT: The controller is an action listener
-firstButton.addActionListener(controller);		
-secondButton.addActionListener(controller);		
-		// 12. Complete the JeopardyController class
+				
+		// 13. Run the program again. Do you see the buttons and the Topic?
+		
+		// 14. *** Now complete the model (JeopardyModel) with real questions you are going to ask ***
 
-		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
 		
 
-		
-		frame.pack();
 
-		// This code puts the score into the frame for you
+		// This code shows the score at the top of the frame
 		quizPanel.setLayout(new GridLayout(buttonCount + 1, 3));
 		frame.add(makeScorePanel(), BorderLayout.NORTH);
 		frame.setSize(Toolkit.getDefaultToolkit().getScreenSize().height,
 				Toolkit.getDefaultToolkit().getScreenSize().width);
 		
 		
-		
-		// 14. Run the program. Do you see the buttons and the Topic?
-		
-		// 15. Now complete the model with the questions you are going to ask
+
 	}
 
 
-	private JButton createButton(String dollarAmount) {
-		
-		// Create a new JButton
-JButton button = new JButton(dollarAmount);
-		// Set the text of the button to the dollarAmount
+	private JButton createButton(String amount) {
 
-		// Increment the buttonCount (this should make the layout vertical)
-buttonCount++;
-		// Return your new button instead of the temporary button
-return button;
-//		return new JButton("temporary button");
+		// 6.1  Create a new JButton
+
+		// 6.2  Set the text of the button to show the amount
+
+		// 6.3  Increment the buttonCount variable (this should make the layout vertical)
+
+		// 6.4  Return the button 
+
+
+	}
+	
+	
+	// The following methods are complete and should not have to be modified.
+	
+	public void clearButton (JButton button ) {
+		button.setText("");
+		frame.repaint();
 	}
 
 	private Component makeScorePanel() {
@@ -109,8 +122,8 @@ return button;
 		return panel;
 	}
 
-	public void updateScore() {
-		scoreBox.setText("" + model.getScore());
+	public void updateScore(int score) {
+		scoreBox.setText("" + score);
 	}
 
 	private JPanel createHeader(String topicName) {
@@ -122,23 +135,6 @@ return button;
 		return panelj;
 	}
 
-	void showCorrectImage() {
-		showImage("correct.jpg");
-	}
-
-	void showIncorrectImage() {
-		showImage("incorrect.jpg");
-	}
-
-	private void showImage(String fileName) {
-		JFrame frame = new JFrame();
-		URL imageURL = getClass().getResource(fileName);
-		Icon icon = new ImageIcon(imageURL);
-		JLabel image = new JLabel(icon);
-		frame.add(image);
-		frame.setVisible(true);
-		frame.pack();
-	}
 }
 
 
