@@ -9,6 +9,9 @@ public class BodyPartQuizController {
 	private BodyPartQuizView view;
 	
 	BodyPartQuizController(BodyPartQuizView view) {
+		
+		/* The controller acts as the go-between so needs to access the view and model */
+				
 		this.view = view;
 		model = new BodyPartQuizModel();
 	}
