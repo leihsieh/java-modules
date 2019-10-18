@@ -11,6 +11,8 @@ import javax.swing.JApplet;
 public class DrumKitModel {
 
 
+	/** The model contains the images and sounds of a drum kit **/
+	
 	private Icon drumIcon;
 	private Icon cymbalIcon;
 	private AudioClip drumSound;
@@ -18,37 +20,41 @@ public class DrumKitModel {
 
 	DrumKitModel() {
 
-		/* 2.1  Download an image of a drum from the Internet. Drop it into the
+		/* 1  Download an image of a drum from the Internet. Drop it into the
 		*       Java project in the "_04_drum_kit" package  or use the image we gave you 
 		*/       
 		
-		// 2.2  Use the setDrumImage method to set the drum image into the DrumKit.	
+		// 2  Use the setDrumImage method to set the drum image into the DrumKit.	
 	
 	
 		
-		/* 2.3  Download an image of a cymbal from the Internet. Drop it into the
+		/* 3  Download an image of a cymbal from the Internet. Drop it into the
 		*      Java project in the "_04_drum_kit" package (or use the image we gave you)
 		*/      
 		
-		// 2.4  Use the setCymbalImage method to set the cymbal image into the DrumKit.
-		
+		// 4  Use the setCymbalImage method to set the cymbal image into the DrumKit.
+	
 
 
-		/* 2.5  Download a drum sound and drop it into the drum kit package.
+		/* 5  Download a drum sound and drop it into the drum kit package.
 		*       You can find it on freesound.org. To download it, log in as
 		*       leagueofamazing (pw:code4life)  or use the sound we gave you
 		*/        		
 		
-		// 2.6  Use the setDrumSound method to set the drum sound into the DrumKit 
-	
+		// 6  Use the setDrumSound method to set the drum sound into the DrumKit 
+
 		
-		/* 2.7  Repeat Step 2.5 for a cymbal sound. 
+		/* 7  Repeat Step 5 for a cymbal sound. 
 		*       Use the setCymbalSound method to set the cymbal sound into the DrumKit
 		*/       
 
 		
 	}
 
+	
+// The methods below convert image and sound files into image (Icon) and sound (AudioClip) objects that the program can use
+// There should be no need to modify this code.	
+	
 	public void setDrumImage(String drumImageFile) {
 		try {
 			URL drumURL = getClass().getResource(drumImageFile);
@@ -56,19 +62,22 @@ public class DrumKitModel {
 		} catch (Exception e) {
 			drumIcon = null;
 		}
+
 	}
-	public void setCymbalImage(String cymbalFileName) {
+	public void setCymbalImage(String cymbalImageFile) {
 		try {
-			URL cymbalURL = getClass().getResource(cymbalFileName);
+			URL cymbalURL = getClass().getResource(cymbalImageFile);
 			cymbalIcon = new ImageIcon(cymbalURL);
 		} catch (Exception e) {
 			cymbalIcon = null;
 		}
+
 	}
 
 	public void setDrumSound(String drumSoundFile) {
 		drumSound = JApplet.newAudioClip(getClass().getResource(drumSoundFile));
 	}
+	
 	public void setCymbalSound(String cymbalSoundFile) {
 		cymbalSound = JApplet.newAudioClip(getClass().getResource(cymbalSoundFile));
 	}
