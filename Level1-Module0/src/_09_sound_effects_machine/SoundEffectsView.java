@@ -6,9 +6,9 @@ import javax.swing.JPanel;
 
 public class SoundEffectsView {
 	
-	SoundEffectsController controller;
+	private SoundEffectsController controller;
 	
-SoundEffectsView() {
+        SoundEffectsView() {
 		
 		// 1. Complete the code in the makeFrame() method 
 		makeFrame();
@@ -20,15 +20,12 @@ SoundEffectsView() {
 
 
 	private void makeFrame() {
-JFrame frame = new JFrame();
-JPanel panel = new JPanel();
-JButton button = new JButton("Drum");
-controller = new SoundEffectsController(this);
-button.addMouseListener(controller);
-frame.add(panel);
-panel.add(button);
-frame.setVisible(true);
-frame.pack();
+		// In this method you will need to write code to create the frame and all the 
+		// components you will display to the user (buttons on a panel).
+		// If you need help, look at other similar recipes you have already completed.
+
+		
+		// Don't forget to add a mouseListener (controller) to EVERY button. 
 	}
 
 
