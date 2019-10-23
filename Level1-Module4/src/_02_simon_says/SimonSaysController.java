@@ -11,9 +11,12 @@ public class SimonSaysController implements KeyListener {
 
 	private SimonSaysModel model; 
 	private SimonSaysView view;
-	private Random r = new Random();
+
 	
 	SimonSaysController (SimonSaysView view) {
+		
+		/* The controller acts as the go-between so needs to access the view and model */		
+		
 		model = new SimonSaysModel();
 		this.view = view;
 	}
@@ -29,17 +32,18 @@ public class SimonSaysController implements KeyListener {
 		// TODO Auto-generated method stub
 
 
-		// 1. Send the keyCode to the model to see if keyIsCorrect
+		// 1. Get the keyCode from the KeyEvent, 
+		//    and send it to the model to see if it is correct (keyIsCorrect)
 		 
-	
 		 
 		// 2. Tell the user whether they were correct or not - use the methods below
 
+		
 		// 3. if the player has had too many tries (ask the  model) ....
 		// 	tell them their score and exit the program
 
 
-		// 4.  tell the view to showNextImage 
+		// 4.  otherwise, tell the view to showNextImage 
 
 	}
 
@@ -50,11 +54,8 @@ public class SimonSaysController implements KeyListener {
 	}
 
 	public Icon getNextRandomImage() {
-		// The next line uses a Random object to get an arrow keyCode
-		int keyCode = r.nextInt(4) + 37;
-
-		// This code gets the image that goes with the keyCode
-		Icon icon = model.getImageForKeyCode(keyCode);
+		// This code gets the image that the player will see
+		Icon icon = model.getNextKeyImage();
 		
 		if (model.simonSays()) {
 			speak ("Simon Says");
