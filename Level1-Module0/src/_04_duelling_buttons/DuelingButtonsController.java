@@ -17,11 +17,10 @@ public class DuelingButtonsController implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 
-		JButton buttonPressed = (JButton) e.getSource();	// This line gets the button
-													// that the mouse clicked on
+		// This line gets the button that the mouse clicked on
+		JButton buttonPressed = (JButton) e.getSource();
 
 		// Whichever button was pressed, tell the view to make it small
-
 		view.makeSmall(buttonPressed);
 	
 	}
