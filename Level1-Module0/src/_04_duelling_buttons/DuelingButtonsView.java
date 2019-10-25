@@ -43,6 +43,7 @@ public class DuelingButtonsView {
 
 		// 5. Add the buttons to the panel
 
+
 		// 6. Pack the frame
 
 		// 7. Set the title of the frame to "Dueling Buttons"
@@ -55,7 +56,6 @@ public class DuelingButtonsView {
 
 		
 		// 10. Add an action listener to each button (hint: the controller is an action listener) 
-
 
 
 		// 11. Run the program again and click on the buttons. 

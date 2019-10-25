@@ -25,7 +25,7 @@ public class SoundEffectsController  {
 
 	
 	// 3. In the mouseClicked method, add code to get the button that the user clicked.
-	//    Hint: you will need to get the source of the MouseEvent
+	//    Hint: you will need to find the source of the MouseEvent
 	
 	// 4. Use the text of the button to decide which sound to play (use the playSoundForButton method below)
 
@@ -42,3 +42,4 @@ public class SoundEffectsController  {
 
 	}
 }
+

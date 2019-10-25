@@ -7,6 +7,10 @@ package _08_body_part_quiz;
 
 public class BodyPartQuizRunner {
 	public static void main(String[] args) {
+		
+    	/** This program shows photos of famous people, and the player must guess who the person is.
+    	 * However, they can only see part of the picture...
+    	 *  **/
 
     	/*  Complete the code in the BodyPartQuizView class before running this program */	
 		

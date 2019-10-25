@@ -24,7 +24,7 @@ public class MyFirstSwingView {
 
 		// 1. Create a JFrame object and store it in a variable like this:
 		//      JFrame frame = new JFrame();
-		
+	
 		// 2. Set the frame to be visible
 
 		// 3. Set the frame's default close operation to JFrame.EXIT_ON_CLOSE
@@ -40,9 +40,9 @@ public class MyFirstSwingView {
 
 		// 7. Set the text of the JLabel to a lovely greeting.
 
-		// 8. Add the JLabel object to the JPanel
+		// 8. tell the panel to add the label
 
-		// 9. Add the JPanel object to the JFrame
+		// 9. tell the frame to add the panel
 
 		// 10. Pack the JFrame.
 		// This will make the frame big enough to show everything you added to the panel.
@@ -50,7 +50,7 @@ public class MyFirstSwingView {
 		// 11. Run MyFirstSwingGuiRunner again. Do you see your message? Close the frame.
 
 		
-		// 12. Use the loadImage method to set the icon of the JLabel object.
+		// 12. Set the icon of the label using the value returned by the loadImage method
 
 		// 13. Re-pack the JFrame.
 		// This will make the frame big enough to show everything you added to the panel.

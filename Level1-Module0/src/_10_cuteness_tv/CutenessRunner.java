@@ -3,7 +3,7 @@ package _10_cuteness_tv;
 public class CutenessRunner {
 	
 	/** This program presents a GUI for a cute video channel that will play 
-	 *  different videos when buttons are pressed. **/
+	 *  different cute videos when buttons are pressed. **/
 
 	// 1. add a main method
 	

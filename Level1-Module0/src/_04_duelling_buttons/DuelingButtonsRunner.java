@@ -7,7 +7,13 @@ package _04_duelling_buttons;
 public class DuelingButtonsRunner {
 	public static void main(String[] args) {
 	
-    	/*  Complete the code in the DuelingButtonsView class before running this program */		
+  
+    	/** This program presents a View with a single buttons. Each time the user clicks
+    	 * the button, a random fortune will be displayed in a pop-up. 
+    	 * The program will use an ActionListener controller to process the mouse clicks. **/
+
+		
+		/*  Complete the code in the DuelingButtonsView class before running this program */		
 		
 		new DuelingButtonsView();
 	}
