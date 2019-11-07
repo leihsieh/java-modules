@@ -15,6 +15,6 @@ public class DuelingButtonsRunner {
 		
 		/*  Complete the code in the DuelingButtonsView class before running this program */		
 		
-		new DuelingButtonsView();
+		new DuelingButtons();
 	}
 }

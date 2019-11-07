@@ -6,11 +6,11 @@ import javax.swing.JOptionPane;
 public class BodyPartQuizController {
 
 	private BodyPartQuizModel model;
-	private BodyPartQuizView view;
+	private BodyPartQuiz view;
 	
-	BodyPartQuizController(BodyPartQuizView view) {
+	BodyPartQuizController(BodyPartQuiz view) {
 		
-		/* The controller acts as the go-between so needs to access the view and model */
+		/* The controller acts as the go-between so needs needs a view and model */
 		
 		this.view = view;
 		model = new BodyPartQuizModel();

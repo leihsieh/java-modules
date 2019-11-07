@@ -14,6 +14,6 @@ public class BodyPartQuizRunner {
 
     	/*  Complete the code in the BodyPartQuizView class before running this program */	
 		
-		new BodyPartQuizView();
+		new BodyPartQuiz();
 	}
 }

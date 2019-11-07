@@ -9,12 +9,12 @@ import javax.swing.JLabel;
 public class DrumKitController implements MouseListener {
 
 
-	DrumKitView view;
+	DrumKit view;
 	DrumKitModel model;
 
-	public DrumKitController(DrumKitView view) {
+	public DrumKitController(DrumKit view) {
 		
-		/* The controller acts as the go-between so needs to access the view and model */	
+		/* The controller acts as the go-between so it needs a view and model */	
 		
 		this.view = view;
 		model =  new DrumKitModel();
@@ -22,14 +22,14 @@ public class DrumKitController implements MouseListener {
 
 	public Icon getDrumImage() {
 		
-		// 1. return the icon of the drum image
+		// 1. return the icon of the drum image from the model
 		
 
 	}
 	
 	public Icon getCymbalImage() {
 		
-		// 2. return the icon of the cymbal image
+		// 2. return the icon of the cymbal image from the model
 		
 
 	}
@@ -52,6 +52,7 @@ public class DrumKitController implements MouseListener {
 	}	
 	
 	// This method will play the drum kit sounds from the model
+	// You should not need to modify this code
 	
 	public void playSoundForLabel (JLabel label) {
 

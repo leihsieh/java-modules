@@ -7,39 +7,20 @@ import javax.swing.JButton;
 
 public class SoundEffectsController  {
 	
-	// 1.  Make this class a MouseListener (Hint: Use implements MouseListener)
+	/** This class has been created but there is a lot of code missing. Check the recipe for instructions **/
+	
+	
+	/* declare view and model variables here */
 
-	// 2.  Let Eclipse assist you in adding the unimplemented methods that a MouseListener needs to have.
-	//     When you have done this, you should see 5 new methods below. Find the one called mouseClicked.
 	
-	private SoundEffectsModel model;
-	private SoundEffectsView view;
-	
-	SoundEffectsController(SoundEffectsView view) {	
+	SoundEffectsController(SoundEffects view) {	
 		
-		/* The controller acts as the go-between so needs to access the view and model */	
-	
-		this.view = view;
-		model =  new SoundEffectsModel();
+		/* initialize the view and model variables here */
+
 	}
 
 	
-	// 3. In the mouseClicked method, add code to get the button that the user clicked.
-	//    Hint: you will need to find the source of the MouseEvent
-	
-	// 4. Use the text of the button to decide which sound to play (use the playSoundForButton method below)
 
-	
-	public void playSoundForLabel (JButton button) {
 
-		// 5. Complete this method for all the sounds you have in your SoundEffectsModel
-		
-		
-		if (button.getText().equals("Drum")) {
-			
-			model.getDrumSound().play();
-		}
-
-	}
 }
 

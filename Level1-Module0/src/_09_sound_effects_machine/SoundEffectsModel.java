@@ -7,7 +7,7 @@ import javax.swing.JApplet;
 public class SoundEffectsModel {
 	
 	
-	// 1. Add a variable for each of the sounds in your sound effects collection
+	// 1. Add a variable for each of the sounds in your sound effects machine
 	
 	private AudioClip drumSound;
 	
@@ -19,7 +19,7 @@ public class SoundEffectsModel {
 		setDrumSound("drum.wav");
 	}
 
-	// 2. Make copies of the following 2 methods to support each of your sound effects
+	// 2. Make copies of the following 2 methods for each of your sound effects
 	
 	public void setDrumSound(String drumSoundFile) {
 		drumSound = JApplet.newAudioClip(getClass().getResource(drumSoundFile));

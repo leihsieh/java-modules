@@ -7,9 +7,9 @@ import javax.swing.JButton;
 
 public class DuelingButtonsController implements ActionListener {
 	
-	private DuelingButtonsView view;
+	private DuelingButtons view;
 	
-	DuelingButtonsController(DuelingButtonsView view) {
+	DuelingButtonsController(DuelingButtons view) {
 		this.view = view;
 	}
 
@@ -17,10 +17,11 @@ public class DuelingButtonsController implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 
-		// This line gets the button that the mouse clicked on
-		JButton buttonPressed = (JButton) e.getSource();
+		JButton buttonPressed = (JButton) e.getSource();	// This line gets the button
+													// that the mouse clicked on
 
 		// Whichever button was pressed, tell the view to make it small
+
 		view.makeSmall(buttonPressed);
 	
 	}

@@ -8,12 +8,12 @@ package _03_photo_quiz;
 public class PhotoQuizRunner {
 	public static void main(String[] args) {
 		
-    	/** This program presents a View that will show pictures to the user.
-    	 * The user will be presented with a question about each picture.
-    	 * The use will be told if they answered the question correctly or not. **/
+    	/** This program presents a window that will show pictures to the user.
+    	 * There will be a question about each picture.
+    	 * The user will be told if they answered the question correctly or not. **/
 
 		
-		/*  Complete the code in the PhotoQuizView class before running this program */
-		new PhotoQuizView();
+		/*  Complete the code in the PhotoQuiz class before running this program */
+		new PhotoQuiz();
 	}
 }

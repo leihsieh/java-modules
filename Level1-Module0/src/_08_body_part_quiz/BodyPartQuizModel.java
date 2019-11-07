@@ -8,9 +8,12 @@ import javax.swing.ImageIcon;
 
 public class BodyPartQuizModel {
 	
-	// You can use the celebrity photos we have placed in the program's 
-	// package,or if you prefer, get celebrity photos from the Internet,
-	// place them in the _05_body_part_quiz package, and change the names below.
+	/* You can use the celebrity photos we have placed in the program's
+	 *  package,or if you prefer, get celebrity photos from the Internet,
+	 *   place them in the _05_body_part_quiz package, and change the names below.
+	 */
+	 
+	// IF YOU CHANGE THE PICTURES, YOU MUST ALSO CHANGE THE ANSWERS!!
 
 	private String firstImage = "src/_07_body_part_quiz/arnold.jpeg";
 	private String secondImage = "src/_07_body_part_quiz/leonardo.jpeg";
@@ -33,17 +36,9 @@ public class BodyPartQuizModel {
 	
 	
 	public BodyPartQuizModel() {
-		/* The quiz has a list of images of celebrities to identify */
+		/* The quiz has a list of images of celebrities to identify (see above) */
 		initializeImageList();
 	
-	}
-
-	public Icon getNextImage() {
-
-		if (nextQuestion < imageList.size()) {
-			return imageList.get(nextQuestion);
-		}
-		return null;
 	}
 
 	private void increaseScore() {
@@ -52,21 +47,36 @@ public class BodyPartQuizModel {
 	}
 	
 	public int getScore() {
-		//3. Change this code to return the value of the score
+		//3. Return the score
 
 		return 0;
 	}
 	
-	public boolean isCorrectAnswer(String guess) {
-		
-		Boolean correct = guess.equalsIgnoreCase(answers.get(nextQuestion));
 	
-		// 4. If they got it right, increase the score
+	
+	 /*      You should not have to change any of the code below here   */
+	
+	public boolean isCorrectAnswer(String guess) {
+	
+		 /* Check if the player got the correct answer. 
+		  * Adjust the score, if necessary, and set the next question.
+		  * Return true if they got it right, false if they did not. */
 
+		Boolean correct = guess.equalsIgnoreCase(answers.get(nextQuestion));
 		
-		/* sets the next question and returns true if the player guessed correctly, false if not */
+		if (correct) {
+			increaseScore();
+		}
+
 		nextQuestion++;
 		return correct;
+	}
+
+	public Icon getNextImage() {
+		if (nextQuestion < imageList.size()) {
+			return imageList.get(nextQuestion);
+		}
+		return null;
 	}
 	
 	private void initializeImageList() {
@@ -81,10 +91,8 @@ public class BodyPartQuizModel {
 		answers.add(fourthAnswer);
 	}
 	
-
 	private Icon loadImage(String fileName) {
 		return new ImageIcon(fileName);
 	}
-
 
 }

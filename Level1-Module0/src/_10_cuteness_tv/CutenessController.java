@@ -8,39 +8,43 @@ public class CutenessController {
 	// 1.  Make your CutenessController class a MouseListener (Hint: Use implements MouseListener)
 
 	// 2.  Let Eclipse assist you in adding the unimplemented methods that a MouseListener needs to have.
-	//     When you have done this, you should see 5 new methods below. Find the one called mouseClicked.
+	//     When you have done this, you should see 5 new methods below. One will be called mouseClicked.
 	
-	CutenessView view;
+	CutenessTV view;
 	
-	CutenessController(CutenessView view) {
+	// 3. Create a CutenessModel variable. 
+	
+	CutenessController(CutenessTV view) {
 		
 		/* The controller acts as the go-between so needs to access the view and model */	
 	
 		this.view = view;
 		
-		// 3. Create a CutenessModel member variable. Initialize it here Hint: new CutenessModel() 
- 
-		// 4. Complete the CutenessModel class with videos for all the buttons.			
+		// 4. Initialize the model variable    Hint: new CutenessModel() 	
 		 
 	}	
 	
-	//In the mouseClicked method (should have been created in step 2): 
+	// 5. If you completed steps 1 and 2 correctly there will be a mouseClicked method in this class.
+	//    Add the following to the mouseClicked method...
 	
-			// 5. add code to get the button that the user clicked.
-			//    Hint: you will need to get the source of the MouseEvent
+			// 5a. add code to get the button that the user clicked.
+			//    Hint: you will need to "get the source" of the MouseEvent
 	
  
-			// 6. Use the text of the button to choose which video to get
-			//    and call the getVideoForButton method below.
+			// 5b. Use the text of the button to choose which video to get
+			//    then call the playVideoForButton method below.
 	
 	
-    private void getVideoForButton(String buttonText) {
+    private void playVideoForButton(String buttonText) {
     	
-    	// 7. Get the URI of the video based on the value of the button text
-    	//  	ex. If the button text is "Duck" get the duck video
-    	// 	  Hint: The model has all the video information.
+    	// 	The model has all the video information.
+    	//  Make sure you complete the CutenessModel class before doing this bit.  
+    		
+    	// 6. Get the right video URI based on the button text
+    	//  	ex. If the button text is "Duck" get the duck video URI from the model
+
     	
-    	// 8. Call the playVideo method below passing it the URI
+    	// 7. Call the playVideo method below, passing it the URI of the video
     	
     	
     }

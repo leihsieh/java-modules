@@ -7,12 +7,12 @@ package _07_drum_kit;
 public class DrumKitRunner {
     public static void main(String[] args) throws Exception {
     	
-    	/** This program presents a View that displays images of drum kit components. 
+    	/** This program presents a window that displays images of drum kit components. 
     	 * Each image will play a sound when the mouse is clicked on it. 
     	 * **/
     	
-    	/*  Complete the code in the DrumKitView class before running this program */
+    	/*  Complete the code in the DrumKit class before running this program */
 
-    	new DrumKitView();
+    	new DrumKit();
     }
 }

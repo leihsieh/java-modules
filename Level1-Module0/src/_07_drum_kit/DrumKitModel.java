@@ -21,7 +21,7 @@ public class DrumKitModel {
 	DrumKitModel() {
 
 		/* 1  Download an image of a drum from the Internet. Drop it into the
-		*       Java project in the "_04_drum_kit" package  or use the image we gave you 
+		*       "drum_kit" package  or use the image we gave you 
 		*/       
 		
 		// 2  Use the setDrumImage method to set the drum image into the DrumKit.	
@@ -29,14 +29,14 @@ public class DrumKitModel {
 	
 		
 		/* 3  Download an image of a cymbal from the Internet. Drop it into the
-		*      Java project in the "_04_drum_kit" package (or use the image we gave you)
+		*      "drum_kit" package (or use the image we gave you)
 		*/      
 		
 		// 4  Use the setCymbalImage method to set the cymbal image into the DrumKit.
 	
 
 
-		/* 5  Download a drum sound and drop it into the drum kit package.
+		/* 5  Download a drum sound and drop it into the "drum_kit" package.
 		*       You can find it on freesound.org. To download it, log in as
 		*       leagueofamazing (pw:code4life)  or use the sound we gave you
 		*/        		
@@ -52,8 +52,8 @@ public class DrumKitModel {
 	}
 
 	
-// The methods below convert image and sound files into image (Icon) and sound (AudioClip) objects that the program can use
-// There should be no need to modify this code.	
+// The methods below convert image and sound files into image (Icon) and sound (AudioClip) objects
+//  that the program can use. There should be no need to modify this code.	
 	
 	public void setDrumImage(String drumImageFile) {
 		try {
