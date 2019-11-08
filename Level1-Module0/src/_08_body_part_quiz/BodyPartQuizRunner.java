@@ -12,7 +12,7 @@ public class BodyPartQuizRunner {
     	 * However, they can only see part of the picture...
     	 *  **/
 
-    	/*  Complete the code in the BodyPartQuizView class before running this program */	
+    	/*  Complete the code in the BodyPartQuiz class before running this program */	
 		
 		new BodyPartQuiz();
 	}

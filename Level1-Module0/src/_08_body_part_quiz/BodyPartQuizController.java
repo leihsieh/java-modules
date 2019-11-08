@@ -21,19 +21,24 @@ public class BodyPartQuizController {
 	
 		String guess = JOptionPane.showInputDialog("who is this?");
 
-			//  Send the answer to the model for checking. 
+			//  Send the answer to the model for checking.
+		
 			//  If they guessed correctly -- tell them they are right
 
 			//  Otherwise -- tell them they are wrong 
 
-			//  Tell the view to show the player the next person. 
+			//  Now tell the view to show the next celebrity. 
 			//  You will need to use the method below to get the next image from the model
 
 	}
 	
 	
+	
+	/* This method will get the picture of the next celebrity. 
+	 * You should not have to change this code.
+	 */
 	public Icon getNextImage() {
-		Icon next = model.getNextImage();
+		Icon next = model.getNextCelebrity().getIcon();
 		
 		if (next == null) {
 			
@@ -42,8 +47,7 @@ public class BodyPartQuizController {
 
 			System.exit(0);
 		} 
-		return next;
-		
+		return next;	
 	}
 	
 }

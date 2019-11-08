@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 public class BodyPartQuiz {
 
 
-	private JFrame window;
+	private JFrame frame;
 	private JPanel panel;
 	private BodyPartQuizController controller;
 
@@ -19,46 +19,60 @@ public class BodyPartQuiz {
 
 		controller = new BodyPartQuizController(this);
 		
-		// 1. Look at the BodyPartQuizModel class. If you want to change the quiz pictures, 
-		// set your image names there first.
+		// Complete the code in the BodyPartQuizModel class.
 		
 		makeFrame();
 	}
 	
 	public void makeFrame() {
 
-		/* The View first consists of 2 Components: a frame and a panel */
-		
-		window = new JFrame();
-		panel = new JPanel();
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		window.add(panel);
+		/* The View consists of 3 Components: a frame, a panel, and a label */
 
-		Dimension dimension = new Dimension(250	,250);
-		window.setPreferredSize(dimension);
+		//    Initialize the frame variable to  "new JFrame()"
+
+		//    Make the frame visible
+	
+		//    Set the frame's default close operation to JFrame.EXIT_ON_CLOSE
+
+		//    Set the title of the frame
+
+		//    Initialize the panel variable  "new JPanel()"
+
+		//    Add the panel to the frame
 		
+		
+		Dimension dimension = new Dimension(250	,250);
+		frame.setPreferredSize(dimension);
+		
+		// This method adds the label with the picture. Complete the method's code below.
 		showNextImage(controller.getNextImage());
 
-		// 2. Run the program. Do you see a picture? Change the frame's Dimension above
-		//    so the player can only see the top half of the face.
+		//   Run the program. Do you see a picture? 
+		//   Now change the frame's Dimension above so the player can only see half of the face.
 		
-
 
 	}
 
 	public void showNextImage(Icon icon) {
 
-		/* This method removes any existing Components from the panel, then it adds a new picture (label) */
+		/* This method removes any existing Components from the panel, 
+		 * then it adds the image of the next celebrity */
 		
-		panel.removeAll();
-		JLabel next = new JLabel();
-		next.setIcon(icon);
-		panel.add(next);
-		window.setVisible(true);
-		window.pack();
+		// remove all the Components from the panel
+	
+		// create a new JLabel
 		
-		// 3. Tell the Controller (BodyPartQuizController) to get the player's guess
-		//    for the new image being displayed
+		// set the icon of the label to the one in the parameter
+		
+		// add the label to the panel
+		
+		// pack the frame
+
+		/*Complete the code in the BodyPartQuizController class */
+		
+		
+		//  Tell the controller to get the player's guess
+		//  for the new image being displayed
 
 	}
 

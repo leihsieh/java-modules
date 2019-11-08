@@ -3,32 +3,13 @@ package _08_body_part_quiz;
 import java.util.ArrayList;
 
 import javax.swing.Icon;
-import javax.swing.ImageIcon;
-
 
 public class BodyPartQuizModel {
 	
-	/* You can use the celebrity photos we have placed in the program's
-	 *  package,or if you prefer, get celebrity photos from the Internet,
-	 *   place them in the _05_body_part_quiz package, and change the names below.
-	 */
-	 
-	// IF YOU CHANGE THE PICTURES, YOU MUST ALSO CHANGE THE ANSWERS!!
-
-	private String firstImage = "src/_07_body_part_quiz/arnold.jpeg";
-	private String secondImage = "src/_07_body_part_quiz/leonardo.jpeg";
-	private String thirdImage = "src/_07_body_part_quiz/morgan.jpeg";
-	private String fourthImage = "src/_07_body_part_quiz/jack.jpeg";
 	
-	private String firstAnswer = "Arnold";
-	private String secondAnswer = "Leonardo";
-	private String thirdAnswer = "Morgan";
-	private String fourthAnswer = "Jack";
+	private ArrayList<BodyPartCelebrity> celebrities = new ArrayList<BodyPartCelebrity>();
 	
-	private ArrayList<Icon> imageList = new ArrayList<Icon>();
-	private ArrayList<String> answers = new ArrayList<String>();
-
-	private int nextQuestion = 0;
+	private int nextCelebrity = 0;
 	
 
 	// 1. Make a private variable to hold the score.
@@ -36,22 +17,34 @@ public class BodyPartQuizModel {
 	
 	
 	public BodyPartQuizModel() {
-		/* The quiz has a list of images of celebrities to identify (see above) */
-		initializeImageList();
+		/** The quiz has a list of celebrities to identify (see below) **/
+		initializeCelebrityList();
 	
 	}
 
+	private void initializeCelebrityList() {
+		
+		//2. If you want to change the celebrities in this quiz, you will need to get new images
+		//   The images must be placed in the body_part_quiz package before you can use them.
+		
+		celebrities.add(new BodyPartCelebrity("src/_08_body_part_quiz/arnold.jpeg", "Arnold"));
+		celebrities.add(new BodyPartCelebrity("src/_08_body_part_quiz/leonardo.jpeg", "Leonardo"));
+		celebrities.add(new BodyPartCelebrity("src/_08_body_part_quiz/morgan.jpeg", "Morgan"));
+		celebrities.add(new BodyPartCelebrity("src/_08_body_part_quiz/jack.jpeg", "Jack"));
+	}
+	
+	
+	
 	private void increaseScore() {
-		//2. Increase the score
+		//3. Increase the score
 
 	}
 	
 	public int getScore() {
-		//3. Return the score
+		//4. Return the score
 
 		return 0;
 	}
-	
 	
 	
 	 /*      You should not have to change any of the code below here   */
@@ -62,37 +55,20 @@ public class BodyPartQuizModel {
 		  * Adjust the score, if necessary, and set the next question.
 		  * Return true if they got it right, false if they did not. */
 
-		Boolean correct = guess.equalsIgnoreCase(answers.get(nextQuestion));
+		Boolean correct = guess.equalsIgnoreCase(celebrities.get(nextCelebrity).getName());
 		
 		if (correct) {
 			increaseScore();
 		}
-
-		nextQuestion++;
+		nextCelebrity++;
 		return correct;
 	}
 
-	public Icon getNextImage() {
-		if (nextQuestion < imageList.size()) {
-			return imageList.get(nextQuestion);
+	public BodyPartCelebrity getNextCelebrity() {
+		if (nextCelebrity < celebrities.size()) {
+			return celebrities.get(nextCelebrity);
 		}
 		return null;
-	}
-	
-	private void initializeImageList() {
-		imageList.add(loadImage(firstImage));
-		imageList.add(loadImage(secondImage));
-		imageList.add(loadImage(thirdImage));
-		imageList.add(loadImage(fourthImage));
-		
-		answers.add(firstAnswer);
-		answers.add(secondAnswer);
-		answers.add(thirdAnswer);
-		answers.add(fourthAnswer);
-	}
-	
-	private Icon loadImage(String fileName) {
-		return new ImageIcon(fileName);
 	}
 
 }

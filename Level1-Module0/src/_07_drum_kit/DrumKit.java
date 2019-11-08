@@ -21,7 +21,7 @@ public class DrumKit {
 		makeFrame();
 
 		// 2. Complete the code in the DrumKitController class
-		controller = new DrumKitController(this);
+		controller = new DrumKitController();
 
 		// 3. Complete the code in the addImages() method 
 		addImages();
@@ -51,32 +51,29 @@ public class DrumKit {
 	
 	private void addImages() {
     	
-    	/* This method will add 2 labels to the View. One is for a drum and the other for a cymbal */
+    	/* This method will add 2 images (labels) to the View. One is for a drum and the other for a cymbal */
     	
-			//    Use the makeLabelFromIcon method below
-			//       	- You will need to get a drum icon from the controller to do this
+		// Initialize the drum JLabel using the makeLabelFromIcon method below
+			//       	- You will need to get the drum icon from the controller to do this
 		
-			//    Initialize the drum variable using the label created above.
+		//    Add the drum JLabel to the panel
 	
-
-			//    Add the drum JLabel to the panel
-	
-			//    Call the pack() method on the frame. 
+		//    Call the pack() method on the frame. 
 		
-		/*   Run your program. 
-		*       Do you see the frame? Do you see the drum image?
+		/*   Run the program. 
+		*       Do you see the frame? Do you see the drum image on it?
 		*/
 	
 	
-			//    Add a MouseListener to the drum JLabel (hint: the controller is a MouseListener) 
+		//    Now add a MouseListener to the drum JLabel (hint: the controller is a MouseListener) 
 	
 						
-		/*    Now run the program and click on the drum. Do you hear the drum sound?
-		*       If you did not, make sure you completed the code in the DrumKitController class
+		/*    Run the program again and click on the drum. Do you hear a drum sound?
+		*       If you did not, make sure you completed all the code in the DrumKitController class
 		*/
 
 
-			//    Repeat the above steps to add a cymbal picture to the drum kit  
+		//    Repeat the above steps to add a cymbal picture to the drum kit  
 
 	}
 	
