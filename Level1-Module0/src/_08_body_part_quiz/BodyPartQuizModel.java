@@ -7,7 +7,7 @@ import javax.swing.Icon;
 public class BodyPartQuizModel {
 	
 	
-	private ArrayList<BodyPartCelebrity> celebrities = new ArrayList<BodyPartCelebrity>();
+	private ArrayList<Celebrity> celebrities = new ArrayList<Celebrity>();
 	
 	private int nextCelebrity = 0;
 	
@@ -27,10 +27,10 @@ public class BodyPartQuizModel {
 		//2. If you want to change the celebrities in this quiz, you will need to get new images
 		//   The images must be placed in the body_part_quiz package before you can use them.
 		
-		celebrities.add(new BodyPartCelebrity("src/_08_body_part_quiz/arnold.jpeg", "Arnold"));
-		celebrities.add(new BodyPartCelebrity("src/_08_body_part_quiz/leonardo.jpeg", "Leonardo"));
-		celebrities.add(new BodyPartCelebrity("src/_08_body_part_quiz/morgan.jpeg", "Morgan"));
-		celebrities.add(new BodyPartCelebrity("src/_08_body_part_quiz/jack.jpeg", "Jack"));
+		celebrities.add(new Celebrity("src/_08_body_part_quiz/arnold.jpeg", "Arnold"));
+		celebrities.add(new Celebrity("src/_08_body_part_quiz/leonardo.jpeg", "Leonardo"));
+		celebrities.add(new Celebrity("src/_08_body_part_quiz/morgan.jpeg", "Morgan"));
+		celebrities.add(new Celebrity("src/_08_body_part_quiz/jack.jpeg", "Jack"));
 	}
 	
 	
@@ -64,7 +64,7 @@ public class BodyPartQuizModel {
 		return correct;
 	}
 
-	public BodyPartCelebrity getNextCelebrity() {
+	public Celebrity getNextCelebrity() {
 		if (nextCelebrity < celebrities.size()) {
 			return celebrities.get(nextCelebrity);
 		}
