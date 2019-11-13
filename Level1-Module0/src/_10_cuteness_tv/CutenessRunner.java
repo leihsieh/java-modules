@@ -7,8 +7,8 @@ public class CutenessRunner {
 
 	// 1. add a main method
 	
-	// 2. in the main method, create a new CutenessView object
+	// 2. in the main method, create a new CutenessTV object
 	
-	// 3. Complete the CutenessView class before running the program
+	// 3. Complete the CutenessTV class before running the program
 	
 }
