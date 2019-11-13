@@ -19,9 +19,10 @@ public class CutenessTV {
 	}
 	
 	
-	// 2. add a makeFrame method. In the method write the code to create the view
+	// 2. add a makeFrame method. In the method write the code to create the frame
+	//    Add a button for each of the cute videos in the model.
 	
 	// 6. After you have completed the Controller code, 
-	//	  add a MouseListener to all the buttons on the View (hint: the controller should be a MouseListener).
+	//	  add a MouseListener to all the buttons of the View (hint: the controller should be a MouseListener).
 	
 }
