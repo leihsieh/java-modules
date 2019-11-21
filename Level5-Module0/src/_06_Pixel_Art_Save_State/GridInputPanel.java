@@ -1,4 +1,4 @@
-package _05_Pixel_Art_Save_State;
+package _06_Pixel_Art_Save_State;
 
 import java.io.Serializable;
 
