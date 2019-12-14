@@ -136,7 +136,7 @@ public class StringMethods {
 				output += Character.toLowerCase(s.charAt(i));
 			}
 		}
-		for (int i = 0; i < output.length(); i++) {
+		for (int i = 0; i < output.length()/2; i++) {
 			if (output.charAt(i) != output.charAt(output.length() - 1 - i)) {
 				return false;
 			}
