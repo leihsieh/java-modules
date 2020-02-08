@@ -21,7 +21,7 @@ public class PixelArtMaker implements MouseListener, ActionListener {
     private GridPanel gp;
     ColorSelectionPanel csp;
     JButton save;
-    private final String SAVE_FILE_LOCATION = "src/_05_Pixel_Art_Save_State/saveState.dat";
+    private final String SAVE_FILE_LOCATION = "src/_06_Pixel_Art_Save_State/saveState.dat";
 
     public void start() {
         gip = new GridInputPanel( this );
