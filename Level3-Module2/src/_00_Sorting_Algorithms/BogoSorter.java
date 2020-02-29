@@ -17,9 +17,34 @@ public class BogoSorter extends Sorter {
 	// STEP 2. Take two random elements in the array and swap them.
 	// STEP 3. Go back to step 1.
 	
-	//1. Complete the sort method using the Bogo sort algorithm. 
+	//1. Complete the sort method using the Bogo sort algorithm.
+	
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
-
+		
+		boolean shouldSwap = false;
+		while(true){
+			for(int i = 0; i < array.length - 1; i++){
+				if(array[i] > array[i + 1]){
+					
+					shouldSwap = true;
+					break;
+				}
+			}
+			
+			if(shouldSwap){
+				Random r = new Random();
+				int a = r.nextInt(array.length);
+				int b = r.nextInt(array.length);
+				int t = array[a];
+				array[a] = array[b];
+				array[b] = t;
+				shouldSwap = false;
+				
+			}else{
+				break;
+			}
+			display.updateDisplay();
+		}
 	}
 }
