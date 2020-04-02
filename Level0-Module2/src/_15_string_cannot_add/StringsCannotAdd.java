@@ -1,4 +1,4 @@
-package _14_intro_to_parseint;
+package _15_string_cannot_add;
 
 import javax.swing.JOptionPane;
 
