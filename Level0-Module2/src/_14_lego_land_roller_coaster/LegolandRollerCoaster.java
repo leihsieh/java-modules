@@ -11,17 +11,15 @@ public class LegolandRollerCoaster {
 		// Uncomment the line below...
 			//if( heightToRide > 42 ) { }
 		
-		//Do you see the heightToRide > 42 underlined red? That is because you are comparing a STRING to an INTEGER.
+		// Do you see the heightToRide > 42 underlined red? That is because you are comparing a STRING to an INTEGER.
 		
-		// 3) Convert heightToRide to heightAsInt using Integer.parseInt();  Hint: int heightAsInt = Integer.parse... //
-		
-		
-		// 4) if heightAsInt is greater than or equal to 42 inches, print "You can ride the LEGO TECHNIC coaster with someone else!" 
-		// Hint: use JOptionPane 
+		// 3) Convert heightToRide to heightAsInt using Integer.parseInt();  Hint: int heightAsInt = Integer.parse... 
 	
-		// 5) if heightAsInt is less than 42 inches, print "You must be at least 42 inches tall to ride the roller coaster pal!"
+		// 4) If the heightAsInt is greater than or equal to 48 inches tall print:
+	    // "Hurray! You are tall enough to ride the LEGO coaster alone!" Hint: use JoptionPane
 		
-		
-		// 6) if the heightAsInt is greater than 48 inches, print "Hurray! You are tall enough to ride the LEGO coaster alone!" 
-		
+		// 5) Else if the heightAsInt is greater than or equal to 42 inches tall print:
+		// "You can ride the LEGO TECHNIC coaster with someone else!" 
+	
+		// 6) else print: "You must be at least 42 inches tall to ride the roller coaster pal!"
 } 
