@@ -1,8 +1,8 @@
-package _14_lego_land_roller_coaster;
+package _15_rollercoaster;
 
 import javax.swing.JOptionPane;
 
-public class LegolandRollerCoaster {
+public class WarmUpRollerCoaster {
 
 	// 1) Make a main method that includes all the steps below…. 
 		
