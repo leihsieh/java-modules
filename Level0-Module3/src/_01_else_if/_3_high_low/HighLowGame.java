@@ -10,20 +10,20 @@ public class HighLowGame {
 		int random = new Random().nextInt(5);
 		
 		// 2. Print out the random variable above
-		
-		// 3. Have steps 4 through 12 repeat ten times
-		
-			// 4. Ask the user for a guess using a pop-up window, and save their response 
 
-			// 5. Convert the users’ answer to an int (Integer.parseInt(string))
-			
-			// 6. If the guess is correct:
-				// 7. Tell the user that they won
-				// 8. Use "System.exit(0);" to quit the game if the user guessed the right answer.
-			// 9. If the guess is high:
-				// 10. Tell the user it's too high
-			// 11. If the guess is low:
-				// 12. Tell the user it's too low
+			// 3. Ask the user for a guess using a pop-up window, and save their response 
+
+			// 4. Convert the users’ answer to an int (Integer.parseInt(string))
+
+			// 5. If the guess is correct:
+				// 6. Tell the user that they won
+				// 7. Use "System.exit(0);" to quit the game if the user guessed the right answer.
+			// 8. If the guess is high:
+				// 9. Tell the user it's too high
+			// 10. If the guess is low:
+				// 11. Tell the user it's too low
+		
+		// 12. Have steps 3 through 11 repeat ten times
 
 		// 13. Tell them they lose
 		
