@@ -12,7 +12,15 @@ public class TheWrongWayCow {
         
         for( int i = 0; i < field.length; i++ ) {
             for( int j = 0; j < field[i].length; j++ ) {
+                    
+                // Check if the search should continue: 2 directions found and at least 3 cows found
+                if( hm.size() > 1 && ( northCnt + southCnt + eastCnt + westCnt ) > 2 ) {   
+                    // Set i to break out of outer loop
+                    i = field.length;
+                    break;
+                }
                 
+                // Found a 'c', find the direction of the cow!
                 if( field[i][j] == 'c' ) {
                     int numRows = field.length;
                     int numCols = field[i].length;
@@ -51,15 +59,6 @@ public class TheWrongWayCow {
                             eastCnt++;
                             continue;
                         }
-                    }
-                    
-                    // If there was a 'c' it must have matched one of the directions,
-                    // so check if the search should continue
-                    if( hm.size() > 1 && ( northCnt + southCnt + eastCnt + westCnt ) > 2 ) {
-                        
-                        // Set i to break out of outer loop
-                        i = field.length;
-                        break;
                     }
                 }
             }
