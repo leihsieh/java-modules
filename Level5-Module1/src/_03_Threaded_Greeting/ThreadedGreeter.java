@@ -1,4 +1,4 @@
-package _03_Threaded_Reverse_Greeting;
+package _03_Threaded_Greeting;
 
 public class ThreadedGreeter implements Runnable{
 	private int number;
