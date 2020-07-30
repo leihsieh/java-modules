@@ -10,11 +10,20 @@ public class SleepyHead {
 		// boolean variables can only hold one of two values - true or false
 
 		/************************  SLEEPY HEAD  **************************/
-		boolean isWeekend;
 		// Write code to ask the user what day it is.
-        
-		// Set the boolean isWeekend based on the value they enter
+        boolean isWeekend
 		
+		String day = JOptionPane.showInputDialog("What day is it?");
+		
+		if(day.equalsIgnoreCase("Sunday") || day.equalsIgnoreCase("Saturday")) {
+			
+		}
+		else {
+			
+		}
+		
+
+		// Set the boolean isWeekend based on the value they enter
 		
 		// If it is the weekend, tell the user they get to sleep in.
 		
